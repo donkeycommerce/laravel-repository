@@ -1,0 +1,22 @@
+{
+    "name": "donkeycommerce/laravel-repository",
+    "type": "library",
+    "keywords": [
+        "laravel",
+        "repository",
+        "repository pattern"
+    ],
+    "authors": [
+        {
+            "name": "danieletulone",
+            "email": "danieletulone.work@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "DonkeyCommerce\\Repository\\": "src/"
+        }
+    }
+}
