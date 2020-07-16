@@ -18,7 +18,7 @@
         "psr-4": {
             "DonkeyCommerce\\Repository\\": "src/"
         },
-        "files": [
+        "files": [
             "src/functions.php"
         ]
     }
