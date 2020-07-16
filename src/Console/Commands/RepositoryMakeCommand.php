@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Console\Commands;
+namespace DonkeyCommerce\Console\Commands;
 
 use Illuminate\Console\GeneratorCommand;
 use Illuminate\Support\Str;
