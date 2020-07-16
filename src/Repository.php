@@ -1,6 +1,6 @@
 <?php
 
-namespace DonkeyCommerce\Repositories;
+namespace DonkeyCommerce\Repository;
 
 use Illuminate\Database\Eloquent\Collection;
 
