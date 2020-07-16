@@ -1,6 +1,6 @@
 <?php
 
-use DonkeyCommerce\repository\RepositoryManager;
+use DonkeyCommerce\Repository\RepositoryManager;
 
 /**
  * Get a repository manager for specific resource.
