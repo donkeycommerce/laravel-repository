@@ -18,8 +18,15 @@
         "psr-4": {
             "DonkeyCommerce\\Repository\\": "src/"
         },
-        "files": [
+        "files": [
             "src/functions.php"
         ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "DonkeyCommerce\\Repository\\Providers\\RepositoryServiceProvider"
+            ]
+        }
     }
 }
