@@ -17,6 +17,9 @@
     "autoload": {
         "psr-4": {
             "DonkeyCommerce\\Repository\\": "src/"
-        }
+        },
+        "files": [
+            "src/functions.php"
+        ]
     }
 }
