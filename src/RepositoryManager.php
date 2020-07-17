@@ -2,6 +2,8 @@
 
 namespace DonkeyCommerce\Repository;
 
+use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
 
 class RepositoryManager
@@ -38,7 +40,7 @@ class RepositoryManager
 
         if ($result instanceof Collection) {
             $this->setResources($result);
-        } else if ($result instanceof Model) {
+        } else if (is_subclass_of($result, Model::class)) {
             $this->setResource($result);
         } else {
             $result = $this;
