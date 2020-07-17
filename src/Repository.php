@@ -26,7 +26,7 @@ class Repository
      *
      * @var
      */
-    private $model;
+    protected $model;
 
     /**
      * Indicates if operation works with one or multiple resource.
