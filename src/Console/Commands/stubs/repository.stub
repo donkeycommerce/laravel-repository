@@ -7,60 +7,48 @@ use DonkeyCommerce\Repository\Contracts\CrudRepository;
 
 class DummyClass extends Repository implements CrudRepository
 {
+    public function __constructor(Model $model)
+    {
+        parent::__constructor($model);
+    }
+
     /**
-     * Create a resource
-     *
-     * @param  array $data
-     * @return Model
+     * @inheritDoc
      */
     public function create($data)
     {
-        //
+        return $this->model::create($data);
     }
 
     /**
-     * Delete a resource
-     *
-     * @param  string|int $id
-     * @return void
+     * @inheritDoc
      */
     public function delete($id)
     {
-        //
+        return $this->find($id)->delete();
     }
 
     /**
-     * Find resource/s by id or ids
-     *
-     * @param [type] $ids
-     * @return Model
+     * @inheritDoc
      */
     public function find($ids)
     {
-        //
+        return $this->model::findOrFail($ids);
     }
 
     /**
-     * Get all resources
-     *
-     * @author Daniele Tulone <danieletulone.work@gmail.com>
-     *
-     * @return void
+     * @inheritDoc
      */
     public function get()
     {
-        //
+        return $this->model::paginate();
     }
 
     /**
-     * Update a resource.
-     *
-     * @param string $id   The id of resource
-     * @param array  $data The data to update
-     * @return void
+     * @inheritDoc
      */
     public function update($id, $data)
     {
-        //
+        return $this->find($id)->update($data);
     }
 }
