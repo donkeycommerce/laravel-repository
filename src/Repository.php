@@ -32,5 +32,27 @@ class Repository
     public function getModel()
     {
         return $this->model;
-    }   
+    }
+
+    /**
+     * Get name of repository.
+     *
+     * @return void
+     */
+    public function getName()
+    {
+        return strtolower(
+            str_replace('Repository', '', (new ReflectionClass($this))->getName())
+        );
+    }
+
+    /**
+     * Get per page value.
+     *
+     * @return void
+     */
+    public function getPerPage()
+    {
+        return request()->perPage;
+    }
 }
