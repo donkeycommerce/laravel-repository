@@ -44,7 +44,7 @@ class Repository
     public function getName()
     {
         return strtolower(
-            str_replace('Repository', '', (new ReflectionClass($this))->getName())
+            str_replace('Repository', '', (new ReflectionClass($this))->getShortName())
         );
     }
 
