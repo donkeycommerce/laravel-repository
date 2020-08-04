@@ -2,6 +2,8 @@
 
 namespace DonkeyCommerce\Repository;
 
+use ReflectionClass;
+
 /**
  * The base class representing a repository.
  */
