@@ -7,11 +7,6 @@ use DonkeyCommerce\Repository\Contracts\CrudRepository;
 
 class DummyClass extends Repository implements CrudRepository
 {
-    public function __construct(Model $model)
-    {
-        parent::__construct($model);
-    }
-
     /**
      * @inheritDoc
      */
