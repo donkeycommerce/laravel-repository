@@ -26,7 +26,8 @@ class Repository
         if ($model) {
             $this->model = $model;
         } else {
-            $this->model = new {'App\Models\\' . $this->getName()};
+            $model = 'App\Models\\' . $this->getName();
+            $this->model = new $model;
         }
     }
 
