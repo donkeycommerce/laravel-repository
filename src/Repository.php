@@ -21,9 +21,13 @@ class Repository
      *
      * @param  $model
      */
-    public function __construct($model)
+    public function __construct($model = null)
     {
-        $this->model = $model;
+        if ($model) {
+            $this->model = $model;
+        } else {
+            $this->model = new {'App\Models\\' . $this->getName()};
+        }
     }
 
      /**
