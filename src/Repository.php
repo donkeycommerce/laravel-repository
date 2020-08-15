@@ -3,6 +3,7 @@
 namespace DonkeyCommerce\Repository;
 
 use ReflectionClass;
+use Illuminate\Support\Str;
 
 /**
  * The base class representing a repository.
@@ -26,7 +27,7 @@ class Repository
         if ($model) {
             $this->model = $model;
         } else {
-            $model = 'App\Models\\' . $this->getName();
+            $model = 'App\Models\\' . Str::studly($this->getName());
             $this->model = new $model;
         }
     }
@@ -46,11 +47,15 @@ class Repository
      *
      * @return void
      */
-    public function getName()
+    public function getName($toLower = true)
     {
-        return strtolower(
-            str_replace('Repository', '', (new ReflectionClass($this))->getShortName())
-        );
+        $name = str_replace('Repository', '', (new ReflectionClass($this))->getShortName());
+
+        if ($toLower) {
+            return strtolower($name);
+        }
+
+        return $name;
     }
 
     /**
